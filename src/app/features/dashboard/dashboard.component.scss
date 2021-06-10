@@ -1,0 +1,131 @@
+$sidebar-width: 25rem;
+$sidebar-transition-duration: 0.7s;
+$top-bar-height: var(--topbar-height);
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-primary);
+
+  aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $sidebar-width;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: transform $sidebar-transition-duration ease;
+    background-color: var(--color-bg-primary);
+    z-index: 999;
+
+    &.collapsed {
+      transform: translateX(-110%);
+    }
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg-overlay);
+    opacity: 0.4;
+    z-index: 900;
+    transform: scale(0);
+
+    &.open {
+      transform: scale(1);
+    }
+  }
+
+  .content-wrapper {
+    min-height: 100%;
+    background-color: var(--color-bg-main);
+    margin-left: $sidebar-width;
+    transition: margin-left $sidebar-transition-duration;
+
+    &.collapsed {
+      margin-left: 0;
+    }
+
+    header {
+      height: $top-bar-height;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: $sidebar-width;
+      transition: left $sidebar-transition-duration;
+      background-color: var(--color-bg-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--alignment-horizontal-space);
+      z-index: 800;
+
+      &.collapsed {
+        left: 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+
+        .menu-btn {
+          margin-right: 1rem;
+          cursor: pointer;
+          transition: transform 0.5s ease 0.3s;
+
+          &.open {
+            position: fixed;
+            top: 2rem;
+            right: 3rem;
+            transform: rotate(90deg);
+            transition-delay: 0s;
+          }
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 3rem;
+            width: 3rem;
+          }
+
+          span {
+            font-size: var(--font-size-title);
+            color: var(--color-title-700);
+            margin-left: 1rem;
+          }
+        }
+      }
+
+      .logged-user a {
+        font-size: var(--font-size-text);
+        color: var(--color-title-700);
+        text-decoration: underline;
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+
+        &:hover {
+          color: var(--color-white);
+          background-color: var(--color-bg-accent);
+          text-decoration: none;
+        }
+      }
+    }
+
+    main {
+      margin: 0 var(--alignment-horizontal-space);
+      margin-top: $top-bar-height;
+      padding-top: 3rem;
+      padding-bottom: 0.1px;
+    }
+  }
+}

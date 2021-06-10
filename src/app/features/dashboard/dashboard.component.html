@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <aside [ngClass]="{ collapsed: (isHandset$ | async), open: isSidenavOpen }">
+    <app-sidenav (logoutEvent)="logout()"></app-sidenav>
+  </aside>
+
+  <div
+    class="overlay"
+    (click)="isSidenavOpen = !isSidenavOpen"
+    [ngClass]="{ open: isSidenavOpen }"
+  ></div>
+
+  <section
+    class="content-wrapper"
+    [ngClass]="{ collapsed: (isHandset$ | async) }"
+  >
+    <header class="mat-elevation-z12" [ngClass]="{ collapsed: (isHandset$ | async) }">
+      <div class="brand">
+        <mat-icon
+          class="menu-btn"
+          *ngIf="isHandset$ | async"
+          (click)="isSidenavOpen = !isSidenavOpen"
+          [ngClass]="{ open: isSidenavOpen }"
+          >{{ isSidenavOpen ? "close" : "menu" }}</mat-icon
+        >
+        <a routerLink="/dashboard">
+          <img src="assets/images/logo.png" alt="luthier-otero-logo" />
+          <span>Luthier Otero</span>
+        </a>
+      </div>
+      <div class="logged-user">
+        <a routerLink="profile">{{ username }}</a>
+      </div>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </section>
+</div>

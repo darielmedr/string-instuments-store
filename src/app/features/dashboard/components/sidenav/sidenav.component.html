@@ -1,0 +1,32 @@
+<nav>
+  <header class="elevation-shadow-light">
+    <a routerLink="/dashboard">
+      <mat-icon>menu</mat-icon>
+      <span>Dashboard</span>
+    </a>
+  </header>
+
+  <ul class="links">
+    <li *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active">
+        <a>
+          <mat-icon>{{link.icon}}</mat-icon>
+          <span *ngIf="isExpanded">{{link.title}}</span>
+        </a>
+      </li>
+  </ul>
+
+  <ul class="end-content">
+    <li routerLink="profile">
+      <a>
+        <mat-icon>account_circle</mat-icon>
+        <span *ngIf="isExpanded">Profile</span>
+      </a>
+    </li>
+    <li (click)="logout()">
+      <a>
+        <mat-icon>logout</mat-icon>
+        <span *ngIf="isExpanded">Log out</span>
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,40 @@
+<mat-card class="mat-elevation-z4">
+  <mat-card-header>
+    <h2>My Profile | Edit</h2>
+    <button class="delete-btn" mat-icon-button (clic)="deleteUser()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-header>
+
+  <form [formGroup]="formUser" (ngSubmit)="saveUser()">
+    <mat-card-content>
+      <div class="profile-picture">
+        <img [src]="formUser.controls.photo.value" alt="{{ formUser.controls.fullName.value }} profile picture" />
+        <label class="browse-pic" for="profile-pic">
+          <mat-icon>photo_camera</mat-icon>
+        </label>
+        <input type="file" id="profile-pic" accept="image/*" (change)="fileBrowse($event)">
+      </div>
+
+      <ul class="profile-info">
+        <li class="profile-info__box">
+          <h3>Full Name</h3>
+          <input type="text" formControlName="fullName" />
+        </li>
+        <li class="profile-info__box">
+          <h3>Username</h3>
+          <input type="text" formControlName="username" />
+        </li>
+        <li class="profile-info__box">
+          <h3>Email</h3>
+          <input type="text" formControlName="email" />
+        </li>
+      </ul>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button class="cancel-btn" mat-flat-button type="button" [routerLink]="['../detail']">Cancel</button>
+      <button class="save-btn" mat-flat-button type="submit">Save</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
