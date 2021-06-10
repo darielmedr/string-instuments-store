@@ -2,16 +2,20 @@
 
 This is a collaborative project that manage a virtual store of string instruments.
 
+## Status
+
+This project is still a work in progress.
+
 ## Features (Functionalities)
 
 * Authentication
- * Login | Logout
- * Change | Reset password
+    * Login | Logout
+    * Change | Reset password
 * Admin profile settings
 * Instruments store
- * CRUD (Create | Read | Update | Delete)
- * Comments section
- * Filter instruments
+    * CRUD (Create | Read | Update | Delete)
+    * Comments section
+    * Filter instruments
 * Notification system
 * 404 page
 
