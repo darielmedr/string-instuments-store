@@ -1,6 +1,6 @@
 # String instruments dashboard
 
-This is a collaborative project that manage a virtual shop of string instruments.
+This is a collaborative project that manage a virtual store of string instruments.
 
 ## Features (Functionalities)
 
