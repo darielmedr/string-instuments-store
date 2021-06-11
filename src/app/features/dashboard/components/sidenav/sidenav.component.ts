@@ -11,6 +11,7 @@ export class SidenavComponent implements OnInit {
 
   isExpanded: boolean = true;
   links = [
+    { title: 'Store', path: 'store', icon: 'storefront' },
     { title: 'Gallery', path: 'gallery', icon: 'images' },
     { title: 'CRUD', path: 'crud', icon: 'build' },
     { title: 'Comments', path: 'comments', icon: 'comments' },
