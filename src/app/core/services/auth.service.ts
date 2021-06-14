@@ -5,7 +5,7 @@ import { shareReplay, tap } from 'rxjs/operators';
 import * as dayjs from 'dayjs';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { SessionData } from 'src/app/shared/models/session-data';
+import { SessionData } from 'src/app/shared/models/session-data.model';
 
 @Injectable({
   providedIn: 'root'

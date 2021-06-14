@@ -1,0 +1,23 @@
+<mat-card *ngIf="!isStoreItemActive">
+  <img [src]="storeItem.image" [alt]="storeItem.description" mat-card-image />
+
+  <mat-card-title>
+    <h2>{{ storeItem.title }}</h2>
+  </mat-card-title>
+
+  <mat-card-content>
+    <p>{{ storeItem.description }}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-icon-button class="info-btn mat-elevation-z4">
+      <mat-icon>info_outline</mat-icon>
+    </button>
+    <button mat-icon-button class="settings-btn mat-elevation-z4">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-icon-button class="delete-btn mat-elevation-z4" (click)="delete()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

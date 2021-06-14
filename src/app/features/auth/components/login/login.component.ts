@@ -4,8 +4,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { LoginUser } from 'src/app/shared/models/login-user';
-import { SessionData } from 'src/app/shared/models/session-data';
+import { LoginUser } from 'src/app/shared/models/login-user.model';
+import { SessionData } from 'src/app/shared/models/session-data.model';
 import { AuthService } from '../../../../core/services/auth.service';
 
 @Component({

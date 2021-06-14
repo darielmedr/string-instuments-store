@@ -42,7 +42,7 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        border: solid 1px var(--color-bg-primary);
+        border: solid 1px var(--color-bg-accent);
         object-fit: cover;
         object-position: center center;
       }
@@ -51,7 +51,7 @@
         position: absolute;
         bottom: 0;
         right: 15%;
-        background-color: var(--color-bg-primary);
+        background-color: var(--color-bg-accent);
         color: var(--color-white);
         width: 4rem;
         height: 4rem;
@@ -82,12 +82,12 @@
         input {
           width: 100%;
           padding: 1rem;
-          border: solid 1px var(--color-bg-primary);
+          border: solid 1px var(--color-bg-accent);
           border-radius: 5px;
           background-color: hsla(0, 0%, 100%, 0.5);
 
           &:focus {
-            box-shadow: 0 0 5px 1px var(--color-bg-primary) inset;
+            box-shadow: 0 0 5px 1px var(--color-bg-accent) inset;
           }
         }
       }
@@ -107,7 +107,7 @@
     }
 
     .save-btn {
-      background-color: var(--color-bg-primary);
+      background-color: var(--color-bg-accent);
     }
   }
 }

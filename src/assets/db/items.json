@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "GA-ALH",
+        "image": "https://images.unsplash.com/photo-1601649705707-13b54dc57b87?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8Ym84alFLVGFFMFl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "description": "Guitarra Alhambra de iniciacion",
+        "content": "Presenta dos fisuras tanto en la tapa como en los aros, que han sido selladas por un luthier profesional.",
+        "publishDate": "1/1/2021",
+        "state": "deleted",
+        "categories": ["REPARED"]
+    },
+    {
+        "id": 2,
+        "title": "BA-J-Caselles",
+        "image": "https://images.unsplash.com/photo-1601649705707-13b54dc57b87?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8Ym84alFLVGFFMFl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "description": "Bandurria de iniciacion",
+        "content": "Buen estado.",
+        "publishDate": "1/1/2021",
+        "state": "deleted",
+        "categories": ["CRAFTED"]
+    },
+    {
+        "id": 3,
+        "title": "VA Gliga Gems II",
+        "image": "https://images.unsplash.com/photo-1601649705707-13b54dc57b87?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8Ym84alFLVGFFMFl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "description": "Viola de 42 cm (16,5) con cuerdas Thomastik Dominant, mentonera, estuche, arco de fibra y almohadilla.",
+        "content": "Usada durante dos años, muy bien cuidada, aspecto casi nuevo. Buen sonido.",
+        "publishDate": "1/1/2021",
+        "state": "deleted",
+        "categories": ["REPARED"]
+    },
+    {
+        "id": 4,
+        "title": "VA-001",
+        "image": "https://images.unsplash.com/photo-1601649705707-13b54dc57b87?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8Ym84alFLVGFFMFl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "description": "La Viola de Papa. Viola de 42 cm (16,5). Tapa de abeto. Fondo y aros de arce flameado.",
+        "content": "Buen estado.",
+        "publishDate": "1/1/2021",
+        "state": "deleted",
+        "categories": ["CRAFTED"]
+    }
+]

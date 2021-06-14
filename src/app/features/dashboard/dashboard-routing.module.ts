@@ -9,16 +9,16 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'profile',
+        redirectTo: 'store',
         pathMatch: 'full'
-      },
-      {
-        path: 'profile',
-        loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)
       },
       {
         path: 'store',
         loadChildren: () => import('./modules/store/store.module').then(m => m.StoreModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)
       },
     ]
   }

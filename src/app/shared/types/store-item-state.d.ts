@@ -1,0 +1,1 @@
+type StoreItemState = 'published' | 'deleted';

@@ -6,7 +6,8 @@ import { DashboardComponent } from './dashboard.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MaterialModule } from 'src/app/shared/modules/material/material.module';
 import { ProfileService } from './services/profile.service';
-
+import { HttpClientModule } from '@angular/common/http';
+import { StoreService } from './services/store.service';
 
 @NgModule({
   declarations: [
@@ -16,10 +17,12 @@ import { ProfileService } from './services/profile.service';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MaterialModule
+    HttpClientModule,
+    MaterialModule,
   ],
   providers: [
-    ProfileService
+    ProfileService,
+    StoreService
   ]
 })
 export class DashboardModule { }
