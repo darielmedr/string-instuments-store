@@ -3,8 +3,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { map, shareReplay, takeUntil } from 'rxjs/operators';
 import { AuthService } from '../../core/services/auth.service';
+import { User } from '../../shared/models/user.model';
 import { ProfileService } from './services/profile.service';
-import { User } from '../../shared/models/user';
 
 @Component({
   selector: 'app-dashboard',

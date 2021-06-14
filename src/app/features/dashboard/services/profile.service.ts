@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, pipe } from 'rxjs';
 import { shareReplay, tap } from 'rxjs/operators';
 import { AuthService } from 'src/app/core/services/auth.service';
-import { User } from 'src/app/shared/models/user';
+import { User } from 'src/app/shared/models/user.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable()

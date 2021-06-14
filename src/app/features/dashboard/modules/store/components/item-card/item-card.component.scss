@@ -1,0 +1,56 @@
+$colorInfo: hsl(240, 66%, 58%);
+$colorSettings: hsl(0, 1%, 42%);
+$colorDelete: hsl(0, 66%, 58%);
+
+.mat-card {
+  height: 100%;
+  position: relative;
+  color: var(--color-text-700);
+  background-color: var(--color-bg-main);
+  overflow: hidden;
+
+  &:hover .mat-card-actions{
+      transform: translate(0);
+  }
+
+  .mat-card-actions {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0 -16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transform: translateY(110%);
+    transition: transform 0.5s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-bg-overlay);
+      border-radius: 5px;
+    }
+
+    button {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .info-btn:hover {
+      background-color: $colorInfo;
+      color: var(--color-white);
+    }
+    .settings-btn:hover {
+      background-color: $colorSettings;
+      color: var(--color-white);
+    }
+    .delete-btn:hover {
+      background-color: $colorDelete;
+      color: var(--color-white);
+    }
+  }
+}

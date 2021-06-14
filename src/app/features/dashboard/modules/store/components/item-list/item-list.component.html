@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="tool-bar">
+    <form [formGroup]="categoryForm">
+      <mat-form-field class="category-filter" appearance="fill">
+        <mat-label>Categories</mat-label>
+        <mat-select formControlName="category" (valueChange)="categoryChanged($event)">
+          <mat-option *ngFor="let category of categories" [value]="category">{{ category | titlecase }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+
+    <button mat-flat-button class="add-storeItem" routerLink="../item-new">
+      <mat-icon>add</mat-icon>
+      <span>Add new</span>
+    </button>
+  </div>
+
+  <div class="storeItems-list">
+    <ng-container *ngFor="let item of storeItems$ | async">
+      <app-item-card [storeItem]="item" (delete)="deleteItem($event)"></app-item-card>
+    </ng-container>
+  </div>
+</div>
